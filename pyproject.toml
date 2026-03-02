@@ -1,0 +1,20 @@
+[project]
+name = "ds-scaffold"
+version = "0.1.0"
+description = "AidBio ds-scaffold: Auto-generate a standardized project structure for modern data science projects, including directories for data, notebooks, scripts, and documentation, along with template files to kickstart your workflow."
+readme = "README.md"
+authors = [
+    { name = "clever.dspy", email = "clever.dspy@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.24.1",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+ds-scaffold = "ds_scaffold.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
