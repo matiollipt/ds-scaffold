@@ -32,29 +32,34 @@ ds-scaffold my-new-project
 - `--desc`, `-d`: One-line project description.
 - `--output`, `-o`: Parent directory for the project (default: current directory).
 - `--force`, `-f`: Overwrite existing files without prompting.
+- `--version`, `-v`: Show the tool version.
 
 ## Project Structure
 
-This tool generates a standardized folder structure for data science projects:
+This tool generates a standardized folder structure for data science projects, compatible with modern workflows using `uv` or `pip`:
 
 ```
 my-new-project/
-├── AGENTS.md          # AI briefing document
-├── CONTEXT.md         # Living project state
-├── dev-notes.md       # Prompt log and decisions
-├── cli.py             # CLI entry point
+├── AGENTS.md          # AI briefing document (paste this first)
+├── CONTEXT.md         # Living project state & roadmap
+├── dev-notes.md       # Prompt log, decisions, and scratchpad
+├── cli.py             # CLI entry point for your pipeline
 ├── data/
 │   ├── raw/           # Source data — never modified
-│   ├── interim/       # Mid-processing
-│   └── processed/     # Final clean data
-├── src/
+│   ├── interim/       # Mid-processing / cleaned data
+│   └── processed/     # Final clean data for modeling
+├── src/               # Core logic (modularized)
 │   ├── ingest.py
 │   ├── process.py
 │   ├── analyze.py
 │   └── visualize.py
 ├── notebooks/         # Exploration only
-├── reports/figures/   # Saved plots
-├── tests/
-├── pyproject.toml
+├── reports/figures/   # Saved plots and visualizations
+├── tests/             # Pytest suite
+├── pyproject.toml     # Modern project configuration (Hatchling)
 └── .gitignore
 ```
+
+## License
+
+This project is licensed under the MIT — see `LICENSE`.
